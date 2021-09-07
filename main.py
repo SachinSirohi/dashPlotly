@@ -24,3 +24,18 @@ fig1 = px.line(
     width=800,
     height=800,
     )
+fig1.update_yaxes(
+    range=[0, max(chart1['yield'])],
+    title='Median of yield',
+    showline=True,
+    linewidth=0.5,
+    linecolor='gray',
+    showgrid=True,
+    gridwidth=0.5,
+    gridcolor='grey',
+    mirror=True,
+    )
+fig1.update_xaxes(type='category', showline=True, linewidth=0.5,
+                  linecolor='gray', mirror=True)
+fig1.layout.plot_bgcolor = '#fff'
+fig1.layout.paper_bgcolor = '#fff'
