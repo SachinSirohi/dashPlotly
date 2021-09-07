@@ -12,3 +12,15 @@ import dash_core_components as dcc
 barley = data.barley()
 chart1 = barley.groupby(['site', 'year'])[['yield']].median().reset_index()
 chart2 = barley.groupby(['site', 'variety'])[['yield']].sum().reset_index()
+
+# Graph1
+
+fig1 = px.line(
+    chart1,
+    x='year',
+    y='yield',
+    color='site',
+    labels='site',
+    width=800,
+    height=800,
+    )
