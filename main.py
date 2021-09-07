@@ -75,3 +75,22 @@ fig2.layout.plot_bgcolor = '#fff'
 fig2.layout.paper_bgcolor = '#fff'
 
 # fig2.show()
+
+app = dash.Dash()
+app.layout = html.Div(children=[dcc.Graph(id='g1', figure=fig1, style={
+    'display': 'inline-block',
+    'height': '50%',
+    'width': '50%',
+    'textAlign': 'center',
+    }), dcc.Graph(id='g2', figure=fig2, style={
+        'display': 'inline-block',
+        'height': '50%',
+        'width': '50%',
+        'textAlign': 'center'})],
+    style={'textAlign': 'center'})
+
+app.css.append_css(
+    {'external_url': 'https://codepen.io/chriddyp/pen/bWLwgP.css'})
+
+if __name__ == '__main__':
+    app.run_server(debug=True)
