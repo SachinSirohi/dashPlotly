@@ -1,6 +1,6 @@
 # dashPlotly
 Graph sample using plotly and dash
-Graph1 : Median of Yield  year and Site 
+Graph 1 : Median of Yield  year and Site 
 
 
 ![alt text](https://github.com/SachinSirohi/dashPlotly/blob/master/screenshot/Graph1.JPG)
